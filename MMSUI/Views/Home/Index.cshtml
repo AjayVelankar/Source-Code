@@ -1,0 +1,167 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <style>
+        .customer-photo {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-size: 32px 35px;
+            background-position: center center;
+            vertical-align: middle;
+            line-height: 32px;
+            box-shadow: inset 0 0 1px #999, inset 0 0 10px rgba(0,0,0,.2);
+            margin-left: 5px;
+        }
+
+        .customer-name {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 32px;
+            padding-left: 3px;
+        }
+    </style>
+
+<div class="page-title">
+    <div class="title_left">
+        <h3>Form Elements</h3>
+    </div>
+    <div class="title_right">
+        <div class="pull-right">
+            <div class="input-group" style="margin-right:150px">
+                <input type="button" class="btn btn-success" value="Save Draft" style="margin-right:20px;">
+                <input type="button" class="btn btn-disabled" value="Send For Approval">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="wizard" class="form_wizard wizard_horizontal">
+    <ul class="wizard_steps">
+        <li>
+            <a href="#step-1" value="">
+                <span class="step_no">1</span>
+                <div>Business Details</div>
+            </a>
+        </li>
+        <li>
+            <a href="#step-2" class="disabled">
+                <span class="step_no">2</span>
+                <div>
+                    Owner Info
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#step-3" value="" class="disabled">
+                <span class="step_no">3</span>
+                <div>Account Setup</div>
+            </a>
+        </li>
+        <li>
+            <a href="#step-4" value="" class="disabled">
+                <span class="step_no">4</span>
+                <div>Bank Info</div>
+        </li>
+    </ul>
+</div>
+
+<div style="margin-top:30px;padding-left:50px">
+    <div class="row ">
+        <div class="col-md-6 col-sm-6" style="">
+            <input type="checkbox" value="Sub Merchant">
+            <label>Sub Merchant</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-5 col-sm-12" style="">
+            <label>Legel Business Name</label>
+            <input type="text" placeholder="Sub Merchant" >
+        </div>
+
+        <div class="col-md-6 col-sm-12" style="">
+            <label>DBA</label>
+            <input type="text" placeholder="Enter DBA Name">
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-5 col-sm-12" style="">
+            <label>Merchant Name on Card Statment</label>
+            <input type="text" placeholder="Merchant Name on Card Statment">
+        </div>
+
+        <div class="col-md-6 col-sm-12" style="">
+            <label>Tax Filing Name</label>
+            <input type="text" placeholder="Tax Filing Name">
+        </div>
+    </div>
+
+
+    <div class="row form-group">
+        <div class="col-md-5 col-sm-12" style="">
+            <label>Business Type</label>
+            <select name="BusinessTypeId" id="businessTypeId" class="floating-input  form-control">
+                <option value="">Select Business Type</option>
+                <option value="3"> CORP</option>
+                <option value="6"> GOV</option>
+                <option value="4"> LLC</option>
+                <option value="1"> NONPROFIT</option>
+                <option value="5"> PARTNER</option>
+                <option value="7"> PUBLIC COMPANY</option>
+                <option value="2"> SOLE</option>
+            </select>
+        </div>
+
+        <div class="col-md-6 col-sm-12" style="">
+            <label>Tax Id Number</label>
+            <input id="TaxIdNo" name="TaxIdNo" placeholder=" "
+                   type="text" value="">
+        </div>
+    </div>
+
+
+    <div class="row form-group">
+        <div class="col-md-5 col-sm-12" style="">
+            <label>Customer Service Phone</label>
+            <input type="text" placeholder="Customer Service Phone" data-inputmask="'mask' : '(999) 999-9999'">
+        </div>
+
+        <div class="col-md-6 col-sm-12" style="">
+            <label>Tax Filing Name</label>
+            <input type="text" placeholder="Tax Filing Name">
+        </div>
+    </div>
+
+
+    <div class="row form-group">
+        <div class="col-md-5 col-sm-12" style="">
+            <label>Years in Business</label>
+            <input type="text" placeholder="Years in Business" data-inputmask="'mask' : '999'">
+        </div>
+
+        <div class="col-md-6 col-sm-12" style="">
+            <label>Years of Incorporation(YYYY)</label>
+            <input type="text" placeholder="Years in Incorporation" data-inputmask="'mask' : '9999'">
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-5 col-sm-12" style="">
+            <label>Years at location</label>
+            <input type="text" placeholder="Years at location" data-inputmask="'mask' : '999'">
+        </div>
+
+        <div class="col-md-6 col-sm-12" style="">
+            <label>is business Foreign Entity</label>
+            <input type="checkbox">
+        </div>
+    </div>
+
+    <div class="row">
+            </div>
+</div>
+
+

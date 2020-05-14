@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @*<title>@ViewData["Title"] - MMSUI</title>
+        <link rel="stylesheet" href="~/css/site.css" />*@
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+    <title>@ViewData["Title"] - MMSUI</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/lib//nprogress/nprogress.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="~/lib/iCheck/skins/flat/green.css">
+    <!-- bootstrap-progressbar -->
+    <link href="~/lib//bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="~/lib/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <!-- bootstrap-daterangepicker -->
+    <link href="~/lib/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800" rel="stylesheet">
+    <link href="~/css/site.css" rel="stylesheet">
+</head>
+<body class="nav-md footer_fixed">
+    <div class="container body" style="position:page">
+        <div class="main_container" style="position:relative;">
+            <div class="col-md-3 left_col">
+                <div id="side_bar" class="side_bar_active">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="#">
+                            <img src="images/FullLogo.svg" alt="..." class="logo-menu">
+                        </a>
+                    </div>
+
+                    <hr class="hr-menu"></hr>
+                    <div class="clearfix"></div>
+                    @await Html.PartialAsync("_sidebar")
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <div class="nav toggle">
+                        <a id="menu_toggle">
+                            <img src="images/Vector.svg"></img>
+                        </a>
+                    </div>
+                    <nav class="nav navbar-nav">
+                        <ul class=" navbar-right">
+                            <li class="nav-item dropdown open" style="padding-left: 15px;">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/admin-icon.svg" alt="">Lily George
+                                </a>
+                                <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="javascript:;"> Profile</a>
+                                    <a class="dropdown-item" href="javascript:;">
+                                        <span class="badge bg-red pull-right">50%</span>
+                                        <span>Settings</span>
+                                    </a>
+                                    <a class="dropdown-item" href="javascript:;">Help</a>
+                                    <a class="dropdown-item" href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                </div>
+                            </li>
+
+                            <li role="presentation" class="nav-item dropdown open">
+                                <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/bell-icon.svg"></i>
+                                    <!-- <span class="badge bg-green">6</span> -->
+                                </a>
+                                <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item">
+                                            No Notification for Now
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+            <!-- page content -->
+            <div class="right_col main-content" role="main">
+                <div class="row" style="display: contents;width:95%; margin-bottom:30px;">
+                    @RenderBody()
+                </div>
+            </div>
+
+
+
+            <footer>
+                <div style="padding-left:225px;">
+                    Victus ©2019 Opus Consulting Inc. All Rights Reserved.  
+                    <a href="/privacy-policy/" target="_blank">Privacy Policy</a> |  
+                    <a href="/for-our-vendors/" target="_blank">Terms of use</a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/lib/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="~/lib/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="~/lib/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="~/lib/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="~/lib/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="~/lib/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="~/lib/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="~/lib/Flot/jquery.flot.js"></script>
+    <script src="~/lib/Flot/jquery.flot.pie.js"></script>
+    <script src="~/lib/Flot/jquery.flot.time.js"></script>
+    <script src="~/lib/Flot/jquery.flot.stack.js"></script>
+    <script src="~/lib/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="~/lib/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="~/lib/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="~/lib/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="~/lib/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="~/lib/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="~/lib/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="~/lib/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="~/lib/moment/min/moment.min.js"></script>
+    <script src="~/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="~/lib/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="~/js/site.js"></script>
+
+</body>
+</html>

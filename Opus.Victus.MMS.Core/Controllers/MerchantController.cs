@@ -1,0 +1,14 @@
+﻿using Microsoft.AspNetCore.Components;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Opus.Victus.MMS.Core.Controllers
+{
+    [Route("Merchant")]
+    public class MerchantController: RootController
+    {
+
+    }
+}
